@@ -1,0 +1,38 @@
+!!! 5
+%html
+  %head
+    - title = "Midwives of Discord"
+    %title= title
+    
+    - desc = "Created by Obelion, Sickness, Bosko and Zeeraw, Midwives Of Discord is a band that blends Metal, Electro and Rap to come up with the freshest sounds it can!"
+    
+    %meta{ name: 'description', content: desc }
+    
+    %meta{ property: 'og:image', content: env['SERVER_NAME'] + "/images/modlogo.png" }
+    %meta{ property: 'og:title', content: title }
+    %meta{ property: 'og:description', content: desc }
+    %meta{ property: 'og:site_name', content: title }
+    
+    %script{ type: "text/javascript", src: '/js/jquery.js' }
+    %script{ type: "text/javascript", src: '/js/jquery.transit.js' }
+    %script{ type: "text/javascript", src: '/js/app.js' }
+    %link{ rel: 'stylesheet', type: "text/css", href: '/css/app.css' }
+
+  %body
+    .mod-effect.mod-effect-left
+      %img#logo{ src: "/images/cog1.png", title: "Midwives of Discord Logo" }
+      %img#logo{ src: "/images/cog2.png", title: "Midwives of Discord Logo" }
+    .mod-effect.mod-effect-right
+      %img#logo{ src: "/images/cog3.png", title: "Midwives of Discord Logo" }
+      %img#logo{ src: "/images/cog4.png", title: "Midwives of Discord Logo" }
+    .container
+      %header
+        %a{ href: '/' }
+          %img#logo{ src: "/images/modlogo.png", title: "Midwives of Discord Logo" }
+      %nav
+        %a{ href: "#about" }= "About"
+        %a{ href: "#about" }= "Listen"
+        %a{ href: "#about" }= "Press"
+      .content= yield
+      %footer
+    

@@ -1,0 +1,117 @@
+$phone: 480px
+$ipad-min: $phone + 1px
+$ipad-max: 980px
+$desktop-s-min: $ipad-max + 1px
+$desktop-s-max: 1230px
+$desktop-m-min: $desktop-s-max + 1px
+$desktop-m-max: 1420px
+$desktop-l-min: $desktop-m-max + 1px
+$desktop-l-max: 1730px
+
+@import "mixins"
+
+body
+  margin: 0
+  padding: 0
+  background: #333 url(/images/bg.png)
+  font-family: "Helvetica Neue", Helvetica,Arial, sans-serif
+
+.container
+  @media (min-width: $phone) and (max-width: $ipad-max)
+    width: auto
+    margin: 20px
+  @media (min-width: $desktop-s-min)
+    width: 780px
+    margin: 20px auto
+
+header
+  position: relative
+  min-height: 160px
+  text-align: center
+  border-bottom: 1px solid rgba(255,255,255,.1)
+  overflow: hidden
+  img
+    width: 250px
+    margin: 10px
+  &:before
+    @media (max-width: $phone)
+      content: ""
+      position: absolute
+      bottom: -50px
+      left: 50px
+      right: 50px
+      height: 50px
+      display: block
+      z-index: 10
+      
+      +box-shadow(0,0,150px,rgba(0,0,0,.6))
+      background: transparent
+      
+    @media (min-width: $ipad-min)
+      content: ""
+      position: absolute
+      bottom: -70px
+      left: 150px
+      right: 150px
+      height: 70px
+      display: block
+      z-index: 10
+  
+      +box-shadow(0,0,250px,rgba(0,0,0,.6))
+      background: transparent
+
+nav
+  padding: 10px 0
+  text-align: center
+  a
+    font-weight: bold
+    text-decoration: none
+    color: #232323
+    margin: 0 20px
+    font-size: 22px
+    text-shadow: 1px 1px 1px rgba(255,255,255,.1), -1px -1px 1px rgba(0,0,0,.6)
+    +transition(all .4s ease-in-out)
+    &:hover
+      text-decoration: none
+      color: #2A2A2A
+    &:focus, &:active
+      text-shadow: 1px 1px 1px rgba(255,255,255,.3), -1px -1px 1px rgba(0,0,0,.7)
+
+.mod-effect
+  position: fixed
+  top: 0
+  bottom: 0
+  width: 100px
+  background: #000
+  overflow: hidden
+  @media (max-width: $ipad-max)
+    display: none
+  @media (min-width: $desktop-s-min)
+    display: block
+  
+  img
+    position: absolute
+  
+.mod-effect-left
+  left: 0
+  border-right: 1px solid rgba(255,255,255,.1)
+  +box-shadow-inset(-3px,0px,50px,rgba(0,0,0,.3))
+  img
+    &:first-child
+      right: -130px
+      top: 100px
+    &:last-child
+      top: 360px
+      right: -70px
+.mod-effect-right
+  right: 0
+  border-left: 1px solid rgba(255,255,255,.1)
+  +box-shadow-inset(3px,0px,50px,rgba(0,0,0,.3))
+  img
+    &:first-child
+      left: -130px
+      bottom: 600px
+      width: 300px
+    &:last-child
+      bottom: -50px
+      left: -350px

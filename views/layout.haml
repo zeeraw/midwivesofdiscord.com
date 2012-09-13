@@ -29,12 +29,14 @@
       %img#logo{ src: "/images/cog4.png", title: "Midwives of Discord Logo" }
     .container
       %header
+        %a.social-button#youtube{ href: 'http://www.youtube.com/user/midwivesofdiscord'}
+        %a.social-button#facebook{ href: 'http://facebook.com/midwivesofdiscord'}
         %a{ href: '/' }
           %img#logo{ src: "/images/modlogo.png", title: "Midwives of Discord Logo" }
       %nav
         %a{ href: "#about" }= "About"
-        %a{ href: "#about" }= "Listen"
-        %a{ href: "#about" }= "Press"
+        %a{ href: "#listen" }= "Listen"
+        %a{ href: "#press" }= "Press"
       .content= yield
       %footer
     

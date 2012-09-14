@@ -1,7 +1,10 @@
 %section#listen{ name: "listen" }
   %h1= "Listen"
-  %iframe{:allowtransparency => "true", :frameborder => "0", :height => "410", :src => "http://bandcamp.com/EmbeddedPlayer/v=2/album=442045135/size=grande3/bgcol=FFFFFF/linkcol=ffffff/transparent=true/", :style => "position: relative; display: block; width: 300px; height: 410px;", :width => "300"}
-    %a{:href => "http://midwivesofdiscord.bandcamp.com/album/album-name-goes-here"} <ALBUM NAME GOES HERE> by Midwives Of Discord
+  %ul.album-list
+    %li
+      %iframe{:allowtransparency => "true", :frameborder => "0", :height => "100", :src => "http://bandcamp.com/EmbeddedPlayer/v=2/album=442045135/size=venti/bgcol=FFFFFF/linkcol=333333/transparent=true/", :style => "position: relative; display: block; width: 360px; height: 100px;", :width => "360"}
+        %a{:href => "http://midwivesofdiscord.bandcamp.com/album/album-name-goes-here"} <ALBUM NAME GOES HERE> by Midwives Of Discord
+      %span= "2012 / 09 / 14"
 
 
 %section#about{ name: "about" }
@@ -20,3 +23,18 @@
     %p= "Sickness is the muscle, his lyrics and flow drive the point home. His strength lies in the quality of his texts, delivering emotion and dark ambiance. Sickness challenges himself on every song and really writes from the heart, making sure every sillaby is perfect before submitting his lyrics to the band."
 
     %p= "Zeeraw is MoD's eyes. Said to be windows to the soul, this really does apply to Zeeraw. Reading his bandmate's wishes, he instinctively understands what his part needs to be. Bringing a touch of elegance through his voice, Zeeraw gives his best and carries the emotion of the songs."
+
+%section#press
+  %h1= "Press"
+  .press-container
+    %h3= "Do you need present Midwives of Discord in an article?"
+    %p= "Here we have a press pack which includes vector logos, samples & a press book."
+    %a.press-download{ href: "/" }
+      = "Download Press Pack"
+      / = " - "
+      %strong= "( .zip )"
+      
+    %a.press-download{ href: "/" }
+      = "Download Press Pack"
+      / = " - "
+      %strong= "( .rar )"

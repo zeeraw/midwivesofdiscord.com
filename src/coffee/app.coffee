@@ -1,4 +1,14 @@
 $ ->
+  ((d, s, id) ->
+    js = undefined
+    fjs = d.getElementsByTagName(s)[0]
+    return  if d.getElementById(id)
+    js = d.createElement(s)
+    js.id = id
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=285710731543614"
+    fjs.parentNode.insertBefore js, fjs
+  ) document, "script", "facebook-jssdk"
+  
   $(window).bind 'scroll', (e) ->
     cogRotation = (speed,clockwise) ->
       rot = ($(window).scrollTop()*speed) % 360

@@ -8,3 +8,5 @@ $ ->
     $('.mod-effect.mod-effect-left > img:last-child').css({ rotate: "#{cogRotation(0.1,false)}deg" })
     $('.mod-effect.mod-effect-right > img:first-child').css({ rotate: "#{cogRotation(0.5,false)}deg" })
     $('.mod-effect.mod-effect-right > img:last-child').css({ rotate: "#{cogRotation(0.05,true)}deg" })
+    
+    
